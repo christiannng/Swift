@@ -21,11 +21,13 @@ class ViewController: UIViewController {
 
     @IBAction func rollButtonPress(_ sender: UIButton) {
         
-        let diceIndex1 = Int.random(in: 0..<diceImages.count)
-        let diceIndex2 = Int.random(in: 0..<diceImages.count)
+//        let diceIndex1 = Int.random(in: 0..<diceImages.count)
+//        let diceIndex2 = Int.random(in: 0..<diceImages.count)
         
-        diceImageView1.image = diceImages[diceIndex1]
-        diceImageView2.image = diceImages[diceIndex2]
+//        diceImageView1.image = diceImages[diceIndex1]
+//        diceImageView2.image = diceImages[diceIndex2]
+        diceImageView1.image = diceImages.randomElement()
+        diceImageView2.image = diceImages.randomElement()
         
         
     }
