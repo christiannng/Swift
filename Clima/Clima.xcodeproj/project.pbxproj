@@ -96,8 +96,8 @@
 		ADAA27CA231BC3FA00365194 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3CB9D51D23A07D8A00C083C7 /* WeatherData.swift */,
 				3CB9D51F23A07DFE00C083C7 /* WeatherManager.swift */,
+				3CB9D51D23A07D8A00C083C7 /* WeatherData.swift */,
 				3CB9D52123A0833300C083C7 /* WeatherModel.swift */,
 			);
 			path = Model;
