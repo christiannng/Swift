@@ -80,7 +80,7 @@ extension WeatherViewController: UITextFieldDelegate {
     
 }
 
-// MARK: - WeatherViewControllerDelegate
+// MARK: - WeatherManagerDelegate
 extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
