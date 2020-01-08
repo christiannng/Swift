@@ -4,6 +4,7 @@ let pizzaInInches: Int = 12
 let slicePerPerson: Int = 5
 var numberOfPeople: Int = 6
 
+//-----------------------------Computed Properties-----------------------------
 //Computed property - Getters - You must indicate with type is using
 var numberOfSlices: Int {
     return pizzaInInches - 4
@@ -35,5 +36,23 @@ var numberOfPizza: Int {
 }
 
 print(numberOfPizza)
+//----------------------------------------------------------------------------------
 
 
+//-----------------------------Observed Properties-----------------------------
+var pizzaInInches3: Int = 10 {
+    willSet {
+        print(newValue)
+    }
+    
+    didSet {
+        print(oldValue)
+        
+        if pizzaInInches3 >= 18 {
+            print("Invalid size specified, pizzaInInches set to 18.")
+            pizzaInInches3 = 18
+        }
+    }
+}
+
+pizzaInInches = 8
