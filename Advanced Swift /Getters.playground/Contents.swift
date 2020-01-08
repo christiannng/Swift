@@ -1,6 +1,8 @@
 import Foundation
 
 let pizzaInInches: Int = 12
+let slicePerPerson: Int = 5
+var numberOfPeople: Int = 6
 
 //Computed property - Getters - You must indicate with type is using
 var numberOfSlices: Int {
@@ -20,7 +22,18 @@ var numberOFSlices2: Int  {
     }
 }
 
+var numberOfPizza: Int {
+    get {
+        let numberOfPeopleFedPerPizza = numberOfSlices / slicePerPerson
+        return numberOfPeople / numberOfPeopleFedPerPizza
+    }
+    
+    set {
+        let totalSlices = numberOfSlices * newValue
+        numberOfPeople = totalSlices / slicePerPerson
+    }
+}
 
-
+print(numberOfPizza)
 
 
