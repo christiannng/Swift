@@ -79,7 +79,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let b = end.position.y - start.position.y
         let c = end.position.z - start.position.z
         
-        let distance = sqrt(pow(a, 2) + pow(b, 2) + pow(c, 2))
+        var distance = sqrt(pow(a, 2) + pow(b, 2) + pow(c, 2))
+        distance = (distance * 100).rounded()/100
         
         updateText(with: "\(abs(distance))", atPosition: end.position)
         
